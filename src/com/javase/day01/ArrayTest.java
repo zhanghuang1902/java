@@ -15,12 +15,26 @@ public class ArrayTest {
     public static void main(String[] args) {
         System.out.println("sb");
         int [] ids;//声明
-        //静态初始化:数组的初始化和数组元素的赋值操作同时进行
+        //静态初始化:数组的初始化和数组元素的赋值操作同时进行（长度和赋值都已申明）
         ids=new int[]{1001,1002,1003,1004};
-        System.out.println(ids.toString());
-        //动态初始化：数组的初始化和数组元素的赋值分开进行
-        String [] names=new String[5];
-        System.out.println(names);
+        System.out.println(ids.toString());//输出地址值
+        int [] ids2=new int[3];//初始化默认值为0
+        for (int i = 0; i <ids2.length ; i++) {
+            System.out.println(ids2[i]);
+
+        }
+        //动态初始化：数组的初始化和数组元素的赋值分开进行(只声明了长度）
+        String [] names=new String[5];//默认初始值null
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
+        System.out.println(names);//输出地址值
+        //错误的创建：
+        /**
+         * int [5] ids=new int[];
+         * int [] ids=new int[];
+         * int[] ids=new inr[3]{100,200,300}
+         */
         //数组一旦初始化完成，长度就确定了
         names[0]="1";
         names[1]="2";
