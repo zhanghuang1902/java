@@ -10,6 +10,7 @@ package com.javase.day01;
  * 数组的分类：
  *      一维数组 二位数组 三维数组。。。
  *      基本类型数组  引用类型数组
+ * @author Admin
  */
 public class ArrayTest {
     public static void main(String[] args) {
@@ -17,18 +18,22 @@ public class ArrayTest {
         int [] ids;//声明
         //静态初始化:数组的初始化和数组元素的赋值操作同时进行（长度和赋值都已申明）
         ids=new int[]{1001,1002,1003,1004};
-        System.out.println(ids.toString());//输出地址值
-        int [] ids2=new int[3];//初始化默认值为0
+        //输出地址值
+        System.out.println(ids.toString());
+        //初始化默认值为0
+        int [] ids2=new int[3];
         for (int i = 0; i <ids2.length ; i++) {
             System.out.println(ids2[i]);
 
         }
-        //动态初始化：数组的初始化和数组元素的赋值分开进行(只声明了长度）
-        String [] names=new String[5];//默认初始值null
+        //动态初始化：数组的初始化和数组元素的赋值分开进行(只申明了长度）
+        //默认初始值null
+        String [] names=new String[5];
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
         }
-        System.out.println(names);//输出地址值
+        //输出地址值
+        System.out.println(names);
         //错误的创建：
         /**
          * int [5] ids=new int[];
