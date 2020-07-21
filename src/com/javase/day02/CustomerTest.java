@@ -32,7 +32,7 @@ package com.javase.day02;
  *
  *  方法的使用：1.可以调用当前类的属性和方法
  *            2.方法中不可以在定义另一个方法
- *      特殊使用：在方法A中调用方法A（递归方法）
+ *   特殊使用：在方法A中调用方法A（递归方法）
  */
 public class CustomerTest {
 }
