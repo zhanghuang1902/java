@@ -13,11 +13,11 @@ import java.io.PrintStream;
 public class Demo {
 
     public static void main(String[] args) {
-//        int a=10;
-//        int b=20;
-//        method(a,b);
-//        System.out.println("a="+a);
-//        System.out.println("b="+b);
+        int a=10;
+        int b=20;
+        method(a,b);
+        System.out.println("a="+a);
+        System.out.println("b="+b);
         int[] arr1=new int[5];
         System.out.println(arr1);
         char [] arr=new char[]{'a','b'};
