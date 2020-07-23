@@ -12,7 +12,7 @@ public class CircleTest {
     }
 }
 
-class Circle{
+class Circle{ 
     int r;
 
     public double findArea(){
