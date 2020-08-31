@@ -28,7 +28,17 @@ public class StaticTest {
         chinese1.age=20;
         System.out.println(chinese1.age);
         System.out.println(chinese1.china);
-
+        int a =10;
+        int b=0;
+        try {
+            System.out.println(a/b);
+            return;
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            System.out.println("?");
+        }
+        System.out.println("zh");
     }
 }
 
