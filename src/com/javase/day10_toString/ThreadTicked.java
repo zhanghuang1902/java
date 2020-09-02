@@ -16,7 +16,7 @@ package com.javase.day10_toString;
  *  *   说明：1.操作共享数据的代码，即为需要被同步的代码
  *  *         2.共享数据：多个线程共同操作的变量，比如：ticket就是共享数据
  *  *         3.同步监视器  俗称：锁   任何一个对象都可以充当锁  要去：多个线程必须共用一把锁
- *  *
+ *  *2.同步方法  在方法的前面加 synchornized  Runnable 中的syschornized  不用static修饰 Thread 需要用static 修饰
  */
 public class ThreadTicked {
     public static void main(String[] args) {
