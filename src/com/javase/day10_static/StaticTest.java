@@ -12,11 +12,22 @@ package com.javase.day10_static;
  *
  *  静态变量：1.我们创建类的多个对象，多个对象共享一个静态变量，当通过某一个对象修改静态变量时，会导致其他对象调用此
  *  静态变量时，也随之修改
+ *          2.静态变量随着类的加载而加载，可以通过“类.静态变量” 的方式进行调用
+ *                     类变量     实例变量
+ *  *            类:    YES        NO
+ *  *            对象:   YES       YES
  *
- *           2.静态变量随着类的加载而加载，可以通过“类.静态变量” 的方式进行调用
  *           3.静态变量的加载 要早于对象的创建
- *           4.由于类只会加载一次，则静态变量在内存中也会存在一份，存在方法去的静态域中
+ *           4.由于类只会加载一次，则静态变量在内存中也会存在一份，存在方法区的静态域中
+ *  静态方法:  1.随着类的加载而加载 类.静态方法 调用
+ *            2.   静态方法   非静态方法
+ *            类:    YES        NO
+ *            对象:   YES       YES
  *
+ *           3.静态方法中,只能调用静态的方法或属性
+ *             非静态方法中,既可以调用非静态的方法或属性,也可以调用静态的方法或属性
+ *           4.在静态方法中,不能使用this 或者super 关键字
+ * @author Admin
  */
 public class StaticTest {
 
@@ -39,6 +50,8 @@ public class StaticTest {
             System.out.println("?");
         }
         System.out.println("zh");
+        //Chinese.eat(); 类不能调用非静态方法
+        Chinese.look();
     }
 }
 
@@ -50,5 +63,25 @@ class Chinese{
     String name;
 
     static  String china;
+
+    public void eat(){
+        System.out.println(name);
+        look();
+        System.out.println("人吃饭");
+    }
+
+    public static void look(){
+        //System.out.println(name); //静态方法中,只能调用静态的方法或属性
+        System.out.println(china);
+        System.out.println("人看书");
+        //eat(); 静态方法中,只能调用静态的方法或属性
+    }
+
+    public static void play(){
+        //System.out.println(name); //静态方法中,只能调用静态的方法或属性
+        System.out.println("打游戏");
+        look();//可以调用静态方法
+        //eat(); 静态方法中,只能调用静态的方法或属性
+    }
 
 }
