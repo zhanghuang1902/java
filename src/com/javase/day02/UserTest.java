@@ -44,7 +44,7 @@ public class UserTest {
 
 class User{
     //属性（成员变量）
-    String name;
+    String name="张煌";
     int age;
     boolean isMale;
 

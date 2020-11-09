@@ -1,7 +1,5 @@
 package com.javase.day09_equals;
 
-import java.util.Objects;
-
 public class Order {
 
     private int orderId;

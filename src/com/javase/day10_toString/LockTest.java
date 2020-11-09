@@ -34,9 +34,9 @@ class lockMethod implements Runnable{
     @Override
     public void run() {
         while (true){
+            //加锁
+            lock.lock();
             try {
-                //加锁
-                lock.lock();
                 if(ticket>0){
                     System.out.println(Thread.currentThread().getName()+":"+ticket);
                     ticket--;
