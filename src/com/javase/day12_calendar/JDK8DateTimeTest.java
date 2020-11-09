@@ -1,5 +1,6 @@
 package com.javase.day12_calendar;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -34,6 +35,8 @@ public class JDK8DateTimeTest {
 
         //get  获取时分秒
         System.out.println(now2.getMinute());
+        DayOfWeek day = now2.getDayOfWeek();
+        System.out.println(day+"00000000");
 
         //with(set) 不可变性 设置时间值
         LocalDate localDate = now.withDayOfMonth(11);

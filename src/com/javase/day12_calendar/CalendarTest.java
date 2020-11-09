@@ -1,5 +1,6 @@
 package com.javase.day12_calendar;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,6 +16,8 @@ import java.util.Date;
 public class CalendarTest {
 
     public static void main(String[] args) {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-DD");
         //1.实例化
         //方式1  创建子类对象 GregorianCalendar
         //方式2  调用其静态方法
