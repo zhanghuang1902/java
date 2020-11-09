@@ -28,7 +28,7 @@ public class JDK8DateTimeTest {
         System.out.println(now2);
 
         //of() 设置指定的年月日时分秒 没有偏移量
-        LocalDateTime dateTime = LocalDateTime.of(2020, 9, 10, 14, 33);
+        LocalDateTime dateTime = LocalDateTime.of(2020, 9, 10, 14, 33,50);
         System.out.println(dateTime);
         LocalDate of = LocalDate.of(2040, 10, 1);
         System.out.println(of);
