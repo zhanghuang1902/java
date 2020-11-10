@@ -1,5 +1,8 @@
 package com.javase.day08_instanceof;
 
+/**
+ * @author Admin
+ */
 public class instanceOfTest {
 
     public static void main(String[] args) {

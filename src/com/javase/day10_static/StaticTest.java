@@ -34,7 +34,7 @@ public class StaticTest {
     public static void main(String[] args) {
         Chinese chinese = new Chinese();
         chinese.age=10;
-        chinese.china="中国";
+        Chinese.china ="中国";
         Chinese chinese1 = new Chinese();
         chinese1.age=20;
         System.out.println(chinese1.age);
