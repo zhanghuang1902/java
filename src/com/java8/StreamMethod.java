@@ -23,7 +23,6 @@ public class StreamMethod {
         list.add(new PersonStream("Anni", 8200, 24, "female", "New York"));
         list.add(new PersonStream("Owen", 9500, 25, "male", "New York"));
         list.add(new PersonStream("Alisa", 7900, 26, "female", "New York"));
-
         Map<String, PersonStream> collect2 = list.stream().filter(item -> item.getSalary() > 8000).collect(Collectors.toMap(PersonStream::getName, item -> item));
         //筛选员工中工资高于8000的人，并形成新的集合。
         List<PersonStream> collect = list.stream().filter(item -> item.getSalary() > 8000).collect(Collectors.toList());
@@ -49,7 +48,6 @@ public class StreamMethod {
         System.out.println(any.get());
         System.out.println("****************");
         System.out.println(b);
-
         List<String> strings = Arrays.asList("m,k,l,a", "1,3,5,7");
         List<String> collect1 = strings.stream().flatMap(item -> {
             String[] split = item.split(",");

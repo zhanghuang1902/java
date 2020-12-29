@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * ClassName:FileReder
@@ -19,19 +20,21 @@ import java.nio.file.Paths;
 public class FileReaderTest {
 
     public static void main(String[] args) throws IOException {
-        FileReader reader = null;
+//        FileReader reader = null;
         try {
-            File file = new File("C:\\Users\\Admin\\Desktop\\hello.txt");
-            reader = new FileReader(file);
-            int read = reader.read();
-            while (read!=-1){
-                System.out.print((char)read);
-                read=reader.read();
-            }
+//            File file = new File("C:\\Users\\Admin\\Desktop\\hello.txt");
+//            reader = new FileReader(file);
+//            int read = reader.read();
+//            while (read!=-1){
+//                System.out.print((char)read);
+//                read=reader.read();
+//            }
+            List<String> strings = Files.readAllLines(Paths.get("C:\\Users\\Admin\\Desktop\\hello.txt"));
+            System.out.println(strings);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            reader.close();
+//            reader.close();
         }
     }
 

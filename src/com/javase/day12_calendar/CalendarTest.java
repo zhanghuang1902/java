@@ -33,9 +33,10 @@ public class CalendarTest {
         System.out.println(instance.get(Calendar.DAY_OF_MONTH));
         //getTime() 日历类装换 成Date
         Date time = instance.getTime();
+        System.out.println(time);
         //setTime() date 转换成日历类
         Date date = new Date();
         instance.setTime(date);
-
+        System.out.println(instance.getTime());
     }
 }
