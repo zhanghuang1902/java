@@ -13,10 +13,31 @@ import com.mycode.bean.User;
 public class MyCode {
 
     public static void main(String[] args) {
-        User user = new User("张煌", "20");
-        User user1 = new User("张煌", "20");
-        if(user.equals(user1)){
-            System.out.println("ok");
+        //分别间隔一个空格,两个空格,一个tab制表符
+        String str = "a b  c    d";
+
+        //四种分隔符
+        String[] arr1 = str.split(" ");
+        String[] arr2 = str.split("s");
+        String[] arr3 = str.split("\t");
+        String[] arr4 = str.split("\\s+");
+
+//打印
+        for (String s : arr1) {
+            System.out.print(s+",");
         }
+        System.out.println("");
+        for (String s : arr2) {
+            System.out.print(s+",");
+        }
+        System.out.println("");
+        for (String s : arr3) {
+            System.out.print(s+",");
+        }
+        System.out.println("");
+        for (String s : arr4) {
+            System.out.print(s+",");
+        }
+
     }
 }
